@@ -1,0 +1,15 @@
+﻿@model List<APIMessages.ProductEntity>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of products "Books" from Web Api</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@string.Format("{0} - {1} ({2}) : {3}đ", item.ProductId, item.Name, item.Description, item.Price)</li>
+    }
+</ul>
+
